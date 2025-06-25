@@ -23,4 +23,14 @@ box.position.y = -1.5;
 scene.add(dodecahedron);
 scene.add(box);
 
+// 4. lighting
+const light = new THREE.SpotLight(0x006769, 100);
+light.position.set(1,1,1);
+scene.add(light);
+
+// 5. renderer
+const renderer = new THREE.WebGLRenderer({canvas});
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.render(scene, camera);
+
 
